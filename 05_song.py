@@ -34,22 +34,43 @@ Beispiel Ergebnis:
 ▶️ Song 'Summer Vibes' wird gespielt...
 """
 
-# TODO: Erstelle hier die Klasse Song
+class Song:
+    def __init__(self, titel, interpreten):
+        self.titel = titel
+        self.interpreten = interpreten
+    
+    def interpret_hinzufuegen(self, name):
+        self.interpreten.append(name)
+        print(f"🎤 {name} wurde hinzugefügt")
+    
+    def zeige_info(self):
+        interpreten_text = ", ".join(self.interpreten)
+        print(f"🎵 Song: {self.titel}")
+        print(f"   Interpreten: {interpreten_text}")
+    
+    def anzahl_interpreten(self):
+        anzahl = len(self.interpreten)
+        print(f"👥 Anzahl Interpreten: {anzahl}")
+        return anzahl
+    
+    def play(self):
+        print(f"▶️ Song '{self.titel}' wird gespielt...")
 
 
-# TODO: Erstelle einen Song mit einem Titel und 2 Interpreten deiner Wahl
+# Erstelle einen Song mit einem Titel und 2 Interpreten deiner Wahl
+song = Song("Summer Vibes", ["DJ Max", "Sarah Sound"])
 
+# Zeige die Song-Info
+song.zeige_info()
 
-# TODO: Zeige die Song-Info
+# Füge einen weiteren Interpreten hinzu
+song.interpret_hinzufuegen("Beat Producer")
 
+# Zeige die Anzahl der Interpreten
+song.anzahl_interpreten()
 
-# TODO: Füge einen weiteren Interpreten hinzu
+# Zeige die Song-Info erneut
+song.zeige_info()
 
-
-# TODO: Zeige die Anzahl der Interpreten
-
-
-# TODO: Zeige die Song-Info erneut
-
-
-# TODO: Spiele den Song ab
+# Spiele den Song ab
+song.play()

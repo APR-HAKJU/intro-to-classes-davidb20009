@@ -64,3 +64,5 @@ Beide Songs haben denselben Datentyp: True
 
 # TODO: Spiele alle Songs ab
 # print("=== Song Playlist ===")
+
+
